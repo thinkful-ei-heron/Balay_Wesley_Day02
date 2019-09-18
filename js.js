@@ -233,6 +233,7 @@ createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5),
 createCharacter('Arwin Unomill', 'Arwin', 'Half-Elf', 'Rivendell', 4, 9)
 ];
 
+
 //console.log(char[4].evaluateFight(char[0]));
 let found = char.find(function(item){
   if (item.nickname === 'aragorn'){
@@ -255,9 +256,32 @@ let attackArr = char.filter(item => {
 });
 //console.log(attackArr);
 
-function weaponCharacter(createCharacter()) {
+//create an array with the weapons corresponding to the names
+let weaponsArr = ['a wizard staff', 'the Ring', 'the String and Barrow Blade', 'an Anduril', 'a Bow and Arrow', 'a Hadhafang'];
 
+//create a function that will add a new describe method and new weapon property to a character object that is passed in
+function addWeapon(char, weapon){
+  //initialize our new describe method
+  function weaponDescribe(){
+    return `${this.name} is a ${this.race} from ${this.origin} who uses ${this.weapon}`;
+  }
+  //assign the new describe method
+  char.describe = weaponDescribe;
+  //assign the new weapon 
+  char.weapon = weapon;
+  //return the character with new describe method and new weapon property
+  return char;
 }
+
+
+//loop through the array that contains each of our character objects
+for (let i = 0; i < char.length; i++) {
+  //run our addWeapon function on each character object with each weapon at the corresponding index in the WeaponsArr
+  //then call the describe method on each altered object to print the new sentence!
+    console.log(addWeapon(char[i], weaponsArr[i]).describe());
+}
+
+
 
 
 
