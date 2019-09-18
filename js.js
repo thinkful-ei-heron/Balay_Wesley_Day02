@@ -130,7 +130,7 @@ console.log(object.meals[3]);
 */
 
 
-
+/*
 let objArr = [
   {
     name: 'wesley',
@@ -164,6 +164,37 @@ for (let i = 0; i < objArr.length; i++) {
   }
   //console.log(`${objArr[i].jobTitle} ${objArr[i].name} reports to ${objArr[i].boss}.`);
 }
+*/
+
+/*
+function decode(str) {
+  const code = {
+    a: 2,
+    b: 3,
+    c: 4, 
+    d: 5
+  };
+  let decodedStr = [];
+  let strArr = str.split(' ');
+  for (let i = 0; i < strArr.length; i++) {
+    if (code.hasOwnProperty(strArr[i][0])) {
+      decodedStr.push(strArr[i][code[strArr[i][0]] - 1]);
+    } else {
+      decodedStr.push(' ');
+    }
+  }
+  return decodedStr.join(' ');
+}
+
+//console.log(decode('craft block argon meter bells brown croon droop'));
+
+function decodeWords(string) {
+  return decode(string);
+}
+
+const sentence = 'craft block argon meter bells brown croon droop';
+console.log(decodeWords(sentence));
+*/
 
 
 
