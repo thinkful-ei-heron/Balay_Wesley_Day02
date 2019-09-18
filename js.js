@@ -106,6 +106,7 @@ function findById(items, idNum) {
 console.log(loaf.hydration());
 */
 
+/* 
 const test = {
   foo: 'foo1',
   bar: 'bar',
@@ -118,3 +119,42 @@ for ( const key in test){
   const value = test[key];
   console.log(key, value);
 }
+*/
+
+/*
+const object = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+};
+
+console.log(object.meals[3]);
+*/
+/*
+let objArr = [
+  {
+    name: 'wesley',
+    jobTitle: 'student'
+  },
+  {
+    name: 'balay',
+    jobTitle: 'student'
+  }, 
+  {
+    name: 'opie',
+    jobTitle: 'pet'
+  },
+  {
+    name: 'humphrey',
+    jobTitle: 'pet'
+  }
+];
+
+
+for (let i = 0; i < objArr.length; i++) {
+  console.log(Object.values(objArr[i]));
+  //console.log(objArr[i].name, objArr[i].jobTitle);
+}
+*/
+
+
+
+
