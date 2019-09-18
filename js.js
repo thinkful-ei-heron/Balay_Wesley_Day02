@@ -239,19 +239,28 @@ let found = char.find(function(item){
     return item;
   }
 });
-console.log(found);
+//console.log(found);
 
-//console.log(Object.entries(char));
+let hobbitArr = char.filter(item => {
+  if (item.race === 'Hobbit') {
+    return item;
+  }
+});
+//console.log(hobbitArr);
 
-//console.log(createCharacter())
+let attackArr = char.filter(item => {
+  if (item.attack > 5) {
+    return item;
+  }
+});
+//console.log(attackArr);
 
-/*
-'Gandalf the White', 'gandalf Wizard', 'Middle Earth', 10, 6,
-'Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1,
-'Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2,
-'Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8,
-'Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5,
+function weaponCharacter(createCharacter()) {
+
+}
 
 
-*/
+
+
+
 
