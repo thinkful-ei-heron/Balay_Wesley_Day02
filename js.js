@@ -128,7 +128,9 @@ const object = {
 
 console.log(object.meals[3]);
 */
-/*
+
+
+
 let objArr = [
   {
     name: 'wesley',
@@ -136,24 +138,33 @@ let objArr = [
   },
   {
     name: 'balay',
-    jobTitle: 'student'
+    jobTitle: 'student',
+    boss: 'wesley'
   }, 
   {
     name: 'opie',
-    jobTitle: 'pet'
+    jobTitle: 'pet',
+    boss: 'wesley'
+    
   },
   {
     name: 'humphrey',
-    jobTitle: 'pet'
+    jobTitle: 'pet',
+    boss: 'wesley'
   }
 ];
 
 
 for (let i = 0; i < objArr.length; i++) {
-  console.log(Object.values(objArr[i]));
-  //console.log(objArr[i].name, objArr[i].jobTitle);
+  //console.log(Object.values(objArr[i]));
+  if (objArr[i].boss === undefined){
+    console.log(`${objArr[i].jobTitle} ${objArr[i].name} doesn't report to anybody. `);
+  } else{
+    console.log(`${objArr[i].jobTitle} ${objArr[i].name} reports to ${objArr[i].boss}.`);
+  }
+  //console.log(`${objArr[i].jobTitle} ${objArr[i].name} reports to ${objArr[i].boss}.`);
 }
-*/
+
 
 
 
