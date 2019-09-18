@@ -82,7 +82,7 @@ function findById(items, idNum) {
 */
 
 
-function validateKeys(object, expectedKeys) {
+/*function validateKeys(object, expectedKeys) {
   for (let i = 0; i < expectedKeys.length; i++) {
     if (Object.keys(object).includes(expectedKeys[i])) {
       if (Object.keys(object).length === expectedKeys.length) {
@@ -93,4 +93,28 @@ function validateKeys(object, expectedKeys) {
     }
   }
 }
+*/
 
+/*const loaf = {
+  flour: 300,
+  water: 210,
+  hydration(){
+    return this.water / this.flour * 100;
+  }
+};
+
+console.log(loaf.hydration());
+*/
+
+const test = {
+  foo: 'foo1',
+  bar: 'bar',
+  fum: 'fum',
+  spam: 'spam'
+};
+
+
+for ( const key in test){
+  const value = test[key];
+  console.log(key, value);
+}
