@@ -1,5 +1,5 @@
 'use strict';
-function createMyObject(){
+/*function createMyObject(){
   return {
     foo: 'bar',
     answerToUniverse: 42,
@@ -9,4 +9,13 @@ function createMyObject(){
       return 'hello';
     }
   };
+}*/
+
+function updateObject(obj) {
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang'
+  return obj;
 }
+
