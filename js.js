@@ -196,7 +196,62 @@ const sentence = 'craft block argon meter bells brown croon droop';
 console.log(decodeWords(sentence));
 */
 
+function createCharacter(name, nickname, race, origin, attack, defense){
+
+  return {
+    name,
+    nickname,
+    race,
+    origin,
+    attack,
+    defense,
+    describe(){
+      console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
+    },
+    evaluateFight(char){
+      let yourDamage = char.attack - this.defense;
+      let oppDamage = this.attack - char.defense;
+
+      if( yourDamage < 0 ){
+        console.log(`Your opponent takes ${oppDamage} damage and you recieve 0 damage.`);
+      }
+      else if( oppDamage < 0 ){
+        console.log(`Your opponent takes 0 damage and you recieve ${yourDamage} damage.`);
+      } else { 
+        console.log(`Your opponent takes ${oppDamage} damage and you recieve ${yourDamage} damage.`);
+      }
+      //console.log(`Your opponent takes ${oppDamage} damage and you recieve ${yourDamage} damage.`);
+    }
+  } ;
+}
+let char = [
+createCharacter('Gandalf the White','gandalf', 'Wizard', 'Middle Earth', 10, 6), 
+createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
+createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2),
+createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8),
+createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5),
+createCharacter('Arwin Unomill', 'Arwin', 'Half-Elf', 'Rivendell', 4, 9)
+];
+
+//console.log(char[4].evaluateFight(char[0]));
+let found = char.find(function(item){
+  if (item.nickname === 'aragorn'){
+    return item;
+  }
+});
+console.log(found);
+
+//console.log(Object.entries(char));
+
+//console.log(createCharacter())
+
+/*
+'Gandalf the White', 'gandalf Wizard', 'Middle Earth', 10, 6,
+'Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1,
+'Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2,
+'Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8,
+'Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5,
 
 
-
+*/
 
